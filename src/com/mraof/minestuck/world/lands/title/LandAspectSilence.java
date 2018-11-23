@@ -68,7 +68,7 @@ public class LandAspectSilence extends TitleLandAspect
 			return random.nextFloat() < 0.01 ? 1 : 0;
 		}
 		@Override
-		public boolean canPlace(BlockPos pos, World world)
+		public boolean canPlace(BlockPos pos, World world, ChunkProviderLands provider)
 		{
 			return !world.getBlockState(pos.down()).getMaterial().isLiquid();
 		}

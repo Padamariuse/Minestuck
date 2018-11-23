@@ -17,7 +17,7 @@ public abstract class SingleBlockDecorator extends BiomeSpecificDecorator
 	{
 		pos = world.getHeight(pos);
 		
-		if(canPlace(pos, world))
+		if(canPlace(pos, world, provider))
 			world.setBlockState(pos, pickBlock(random), 2);
 		
 		return null;
@@ -31,5 +31,5 @@ public abstract class SingleBlockDecorator extends BiomeSpecificDecorator
 	
 	public abstract IBlockState pickBlock(Random random);
 	
-	public abstract boolean canPlace(BlockPos pos, World world);
+	public abstract boolean canPlace(BlockPos pos, World world, ChunkProviderLands provider);
 }
