@@ -8,6 +8,7 @@ import com.mraof.minestuck.world.lands.LandAspectRegistry;
 import com.mraof.minestuck.world.lands.decorator.BlockBlobDecorator;
 import com.mraof.minestuck.world.lands.decorator.ILandDecorator;
 import com.mraof.minestuck.world.lands.decorator.LeaflessTreeDecorator;
+import com.mraof.minestuck.world.lands.decorator.RockDecorator;
 import com.mraof.minestuck.world.lands.decorator.SurfaceDecoratorVein;
 import com.mraof.minestuck.world.lands.decorator.SurfaceMushroomGenerator;
 import com.mraof.minestuck.world.lands.decorator.UndergroundDecoratorVein;
@@ -16,6 +17,7 @@ import com.mraof.minestuck.world.lands.gen.DefaultTerrainGen;
 import com.mraof.minestuck.world.lands.gen.ILandTerrainGen;
 import com.mraof.minestuck.world.lands.structure.blocks.StructureBlockRegistry;
 import net.minecraft.block.BlockColored;
+import net.minecraft.block.BlockQuartz;
 import net.minecraft.block.BlockSilverfish;
 import net.minecraft.block.BlockStoneBrick;
 import net.minecraft.block.BlockStoneSlab;
@@ -46,6 +48,7 @@ public class LandAspectRock extends TerrainLandAspect
 		{
 			variations.add(this);
 			variations.add(new LandAspectRock(Variant.PETRIFICATION));
+			variations.add(new LandAspectRock(Variant.QUARTZ));
 		}
 	}
 
@@ -54,20 +57,33 @@ public class LandAspectRock extends TerrainLandAspect
 	{
 		if(type == Variant.PETRIFICATION) {
 			registry.setBlockState("surface", Blocks.STONE.getDefaultState());	
-		} else {
+		} else if(type == Variant.ROCK){
 			registry.setBlockState("surface", Blocks.GRAVEL.getDefaultState());
+		} else {
+			registry.setBlockState("surface", Blocks.QUARTZ_BLOCK.getDefaultState());
 		}
-		registry.setBlockState("upper", Blocks.COBBLESTONE.getDefaultState());
-		registry.setBlockState("structure_primary_decorative", Blocks.STONEBRICK.getDefaultState().withProperty(BlockStoneBrick.VARIANT, BlockStoneBrick.EnumType.CHISELED));
-		registry.setBlockState("structure_primary_stairs", Blocks.STONE_BRICK_STAIRS.getDefaultState());
 		registry.setBlockState("structure_secondary", MinestuckBlocks.stone.getDefaultState());
 		registry.setBlockState("structure_secondary_decorative", MinestuckBlocks.stone.getDefaultState().withProperty(BlockMinestuckStone.VARIANT, BlockMinestuckStone.BlockType.COARSE_CHISELED));
 		registry.setBlockState("structure_secondary_stairs", MinestuckBlocks.coarseStoneStairs.getDefaultState());
 		registry.setBlockState("structure_planks_slab", Blocks.STONE_SLAB.getDefaultState().withProperty(BlockStoneSlab.VARIANT, BlockStoneSlab.EnumType.BRICK));		registry.setBlockState("structure_planks_slab", Blocks.STONE_SLAB.getDefaultState().withProperty(BlockStoneSlab.VARIANT, BlockStoneSlab.EnumType.BRICK));
-		registry.setBlockState("village_path", Blocks.MOSSY_COBBLESTONE.getDefaultState());
-		registry.setBlockState("village_fence", Blocks.COBBLESTONE_WALL.getDefaultState());
-		registry.setBlockState("structure_wool_1", Blocks.WOOL.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BROWN));
-		registry.setBlockState("structure_wool_3", Blocks.WOOL.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.GRAY));
+		if(type == Variant.QUARTZ) {
+			registry.setBlockState("structure_primary", Blocks.QUARTZ_BLOCK.getDefaultState());
+			registry.setBlockState("upper", Blocks.QUARTZ_BLOCK.getDefaultState());
+			registry.setBlockState("structure_primary_decorative", Blocks.QUARTZ_BLOCK.getDefaultState().withProperty(BlockQuartz.VARIANT, BlockQuartz.EnumType.CHISELED));
+			registry.setBlockState("structure_primary_stairs", Blocks.QUARTZ_STAIRS.getDefaultState());
+			registry.setBlockState("structure_wool_1", Blocks.WOOL.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.WHITE));
+			registry.setBlockState("structure_wool_3", Blocks.WOOL.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.RED));
+			registry.setBlockState("village_path", Blocks.COBBLESTONE.getDefaultState());
+			registry.setBlockState("village_fence", Blocks.NETHER_BRICK_FENCE.getDefaultState());
+		} else {
+			registry.setBlockState("upper", Blocks.COBBLESTONE.getDefaultState());
+			registry.setBlockState("structure_primary_decorative", Blocks.STONEBRICK.getDefaultState().withProperty(BlockQuartz.VARIANT, BlockQuartz.EnumType.CHISELED));
+			registry.setBlockState("structure_primary_stairs", Blocks.STONE_BRICK_STAIRS.getDefaultState());
+			registry.setBlockState("structure_wool_1", Blocks.WOOL.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BROWN));
+			registry.setBlockState("structure_wool_3", Blocks.WOOL.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.GRAY));
+			registry.setBlockState("village_path", Blocks.MOSSY_COBBLESTONE.getDefaultState());
+			registry.setBlockState("village_fence", Blocks.COBBLESTONE_WALL.getDefaultState());
+		}
 	}
 	
 	@Override
@@ -81,8 +97,10 @@ public class LandAspectRock extends TerrainLandAspect
 	{
 		if(type == Variant.PETRIFICATION) {
 			return new String[] {"petrification"};
-		} else {
+		} else if(type == Variant.ROCK) {
 			return new String[] {"rock", "stone", "ore"};
+		} else {
+			return new String[] {"quartz"};
 		}
 	}
 	
@@ -106,13 +124,15 @@ public class LandAspectRock extends TerrainLandAspect
 			list.add(new LeaflessTreeDecorator(MinestuckBlocks.petrifiedLog.getDefaultState(), 0.05F, BiomeMinestuck.mediumRough));
 			list.add(new BlockBlobDecorator(Blocks.COBBLESTONE.getDefaultState(), 0, 3, BiomeMinestuck.mediumNormal));
 			list.add(new BlockBlobDecorator(Blocks.COBBLESTONE.getDefaultState(), 1, 4, BiomeMinestuck.mediumRough));
-		} else {
+		} else if(type == Variant.PETRIFICATION){
 			list.add(new SurfaceMushroomGenerator(MinestuckBlocks.petrifiedPoppy, true, 10, 25, BiomeMinestuck.mediumNormal));
 			list.add(new SurfaceMushroomGenerator(MinestuckBlocks.petrifiedPoppy, true, 5, 25, BiomeMinestuck.mediumRough));
 			list.add(new SurfaceMushroomGenerator(MinestuckBlocks.petrifiedGrass, true, 35, 35, BiomeMinestuck.mediumNormal));
 			list.add(new SurfaceMushroomGenerator(MinestuckBlocks.petrifiedGrass, true, 55, 55, BiomeMinestuck.mediumRough));
 			list.add(new LeaflessTreeDecorator(MinestuckBlocks.petrifiedLog.getDefaultState(), 0.1F, BiomeMinestuck.mediumNormal));
 			list.add(new LeaflessTreeDecorator(MinestuckBlocks.petrifiedLog.getDefaultState(), 2.5F, BiomeMinestuck.mediumRough));
+		} else {
+			list.add(new LeaflessTreeDecorator(MinestuckBlocks.petrifiedLog.getDefaultState(), 0.1F, BiomeMinestuck.mediumNormal, BiomeMinestuck.mediumRough));
 		}
 		return list;
 	}
@@ -151,9 +171,17 @@ public class LandAspectRock extends TerrainLandAspect
 	public ILandTerrainGen createTerrainGenerator(ChunkProviderLands chunkProvider, Random rand)
 	{
 		DefaultTerrainGen terrainGen = new DefaultTerrainGen(chunkProvider, rand);
-		terrainGen.normalVariation = 0.6F;
-		terrainGen.roughtVariation = 0.9F;
-		terrainGen.oceanVariation = 0.4F;
+		if(type == Variant.QUARTZ) {
+			terrainGen.normalHeight = 0.2F;
+			terrainGen.roughHeight = 0.4F;
+			terrainGen.normalVariation = 0.6F;
+			terrainGen.roughtVariation = 5.5F;
+			terrainGen.oceanVariation = 0.4F;
+		} else {
+			terrainGen.normalVariation = 0.6F;
+			terrainGen.roughtVariation = 0.9F;
+			terrainGen.oceanVariation = 0.4F;
+		}
 		return terrainGen;
 	}
 	
@@ -178,6 +206,7 @@ public class LandAspectRock extends TerrainLandAspect
 	public static enum Variant
 	{
 		ROCK,
+		QUARTZ,
 		PETRIFICATION;
 		public String getName()
 		{
