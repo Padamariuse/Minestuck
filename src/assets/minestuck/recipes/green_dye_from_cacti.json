@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minestuck:blooming_cactus",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "minecraft:dye",
+    "data": 2,
+    "count": 1
+  }
+}
