@@ -78,7 +78,6 @@ public class MinestuckBlocks
 	public static Block woodenCactus = new BlockCactusSpecial(SoundType.WOOD, "axe").setHardness(1.0F).setResistance(2.5F).setUnlocalizedName("woodenCactus");
 	public static Block sugarCube = new BlockCustom(Material.SAND, MapColor.SNOW, SoundType.SAND).setUnlocalizedName("sugarCube").setHardness(0.4F).setCreativeTab(TabMinestuck.instance);
 	public static Block rabbitSpawner = new BlockMobSpawner().setUnlocalizedName("rabbitSpawner");
-	public static Block lightningRod = new BlockLightningRod().setUnlocalizedName("lightningRod");
 	public static Block appleCake = new BlockSimpleCake(2, 0.5F, null).setUnlocalizedName("appleCake");
 	public static Block blueCake = new BlockSimpleCake(2, 0.3F, (EntityPlayer player) -> player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 150, 0))).setUnlocalizedName("blueCake");
 	public static Block coldCake = new BlockSimpleCake(2, 0.3F, (EntityPlayer player) -> {player.addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, 200, 1));player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 200, 1));}).setUnlocalizedName("coldCake");
@@ -247,8 +246,6 @@ public class MinestuckBlocks
 		
 		registry.register(blockGoldSeeds.setRegistryName("gold_seeds"));
 		registry.register(glowystoneWire.setRegistryName("glowystone_wire"));
-		
-		registry.register(lightningRod.setRegistryName("lightning_rod"));
 		
 		registry.register(appleCake.setRegistryName("apple_cake"));
 		registry.register(blueCake.setRegistryName("blue_cake"));

@@ -81,7 +81,7 @@ public class LandAspectCake extends TitleLandAspect
 			return 0;
 		}
 		@Override
-		public boolean canPlace(BlockPos pos, World world, ChunkProviderLands provider)
+		public boolean canPlace(BlockPos pos, World world)
 		{
 			return Blocks.CAKE.canPlaceBlockAt(world, pos) && !world.getBlockState(pos).getMaterial().isLiquid() && world.getBlockState(pos).getBlock().isReplaceable(world, pos);
 		}

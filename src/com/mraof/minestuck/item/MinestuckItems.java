@@ -282,7 +282,6 @@ public class MinestuckItems
 		
 		registerItemBlock(registry, new ItemBlock(woodenCactus));
 		registerItemBlock(registry, new ItemBlock(sugarCube));
-		registerItemBlock(registry, new ItemBlock(lightningRod));
 		registerItemBlock(registry, new ItemBlock(appleCake)).setMaxStackSize(1);
 		registerItemBlock(registry, new ItemBlock(blueCake)).setMaxStackSize(1);
 		registerItemBlock(registry, new ItemBlock(coldCake)).setMaxStackSize(1);

@@ -299,7 +299,6 @@ public class MinestuckModelManager
 			register(blockLaptopOff, type.ordinal(), type.getName()+"_computer");
 		
 		register(woodenCactus);
-		register(lightningRod);
 		register(sugarCube);
 		register(appleCake);
 		register(blueCake);

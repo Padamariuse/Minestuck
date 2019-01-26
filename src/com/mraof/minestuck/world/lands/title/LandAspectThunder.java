@@ -1,10 +1,5 @@
 package com.mraof.minestuck.world.lands.title;
 
-import com.mraof.minestuck.block.MinestuckBlocks;
-import com.mraof.minestuck.world.biome.BiomeMinestuck;
-import com.mraof.minestuck.world.lands.decorator.LightningRodDecorator;
-import com.mraof.minestuck.world.lands.decorator.PillarDecorator;
-import com.mraof.minestuck.world.lands.decorator.SurfaceMushroomGenerator;
 import com.mraof.minestuck.world.lands.gen.ChunkProviderLands;
 import com.mraof.minestuck.world.lands.terrain.TerrainLandAspect;
 import net.minecraft.block.BlockColored;
@@ -43,7 +38,6 @@ public class LandAspectThunder extends TitleLandAspect
 		chunkProvider.blockRegistry.setBlockState("structure_wool_2", Blocks.WOOL.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.BLUE));
 		chunkProvider.blockRegistry.setBlockState("carpet", Blocks.CARPET.getDefaultState().withProperty(BlockColored.COLOR, EnumDyeColor.GREEN));
 		chunkProvider.oceanChance = Math.min(Math.max(0.5F, chunkProvider.oceanChance), chunkProvider.oceanChance*1.2F);
-		chunkProvider.decorators.add(new LightningRodDecorator(MinestuckBlocks.lightningRod));
 	}
 	
 	@Override

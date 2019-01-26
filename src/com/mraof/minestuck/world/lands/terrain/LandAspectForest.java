@@ -95,7 +95,6 @@ public class LandAspectForest extends TerrainLandAspect
 		if(type == Variant.FOREST) {
 			list.add(new BasicTreeDecorator(5, BiomeMinestuck.mediumNormal));
 			list.add(new BasicTreeDecorator(8, BiomeMinestuck.mediumRough));
-			list.add(new FallenTreeDecorator(8, Blocks.LOG.getDefaultState().withProperty(BlockOldLog.VARIANT,  BlockPlanks.EnumType.OAK).withProperty(BlockMinestuckLog.LOG_AXIS, EnumAxis.NONE), BiomeMinestuck.mediumNormal));
 		} else {
 			list.add(new SpruceTreeDecorator(Blocks.LOG.getDefaultState().withProperty(BlockOldLog.VARIANT, BlockPlanks.EnumType.SPRUCE), Blocks.LEAVES.getDefaultState().withProperty(BlockOldLeaf.VARIANT, BlockPlanks.EnumType.SPRUCE).withProperty(BlockLeaves.CHECK_DECAY, false), BiomeMinestuck.mediumNormal));
 			list.add(new SpruceTreeDecorator(Blocks.LOG.getDefaultState().withProperty(BlockOldLog.VARIANT, BlockPlanks.EnumType.SPRUCE), Blocks.LEAVES.getDefaultState().withProperty(BlockOldLeaf.VARIANT, BlockPlanks.EnumType.SPRUCE).withProperty(BlockLeaves.CHECK_DECAY, false), BiomeMinestuck.mediumRough));
