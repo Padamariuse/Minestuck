@@ -16,7 +16,7 @@ public class BlockGlowingMushroom extends BlockBush
 	public BlockGlowingMushroom()
 	{
 		super();
-		setCreativeTab(TabMinestuck.instance);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		setUnlocalizedName("glowingMushroom");
 		setLightLevel(0.75F);
 		setSoundType(SoundType.PLANT);

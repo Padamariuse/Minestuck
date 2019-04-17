@@ -34,7 +34,7 @@ public class BlockMinestuckSlab extends BlockSlab
 	public BlockMinestuckSlab(IBlockState modelState, EnumSlabStairMaterial slabStairMaterial, boolean isDouble)
 	{
 		super(modelState.getMaterial());
-		setCreativeTab(TabMinestuck.instance);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		this.modelState = modelState;
 		this.isDouble = isDouble;
 		this.useNeighborBrightness = true;

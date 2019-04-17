@@ -36,7 +36,7 @@ public class BlockVein extends BlockDirectional
 
 	protected BlockVein(String unlocalizedName) {
 		super(Material.WOOD);
-		setCreativeTab(TabMinestuck.instance);
+        setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		setUnlocalizedName(unlocalizedName);
 		setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		setHardness(0.45F);

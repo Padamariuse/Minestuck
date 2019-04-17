@@ -45,7 +45,7 @@ public class BlockColoredDirt extends Block
 	public BlockColoredDirt()
 	{
 		super(Material.GROUND);
-		this.setCreativeTab(TabMinestuck.instance);
+		this.setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		setSoundType(SoundType.GROUND);
 		setDefaultState(getBlockState().getBaseState().withProperty(BLOCK_TYPE, BlockType.BLUE));
 	}

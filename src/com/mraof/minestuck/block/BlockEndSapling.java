@@ -32,7 +32,7 @@ public class BlockEndSapling extends BlockBush implements IGrowable
 	protected BlockEndSapling()
 	{
 		this.setDefaultState(this.blockState.getBaseState().withProperty(ALPHA, false).withProperty(OMEGA, false));
-		this.setCreativeTab(TabMinestuck.instance);
+		this.setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		this.setUnlocalizedName("endSapling");
 		this.setSoundType(SoundType.PLANT);
 	}

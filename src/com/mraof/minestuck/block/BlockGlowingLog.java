@@ -15,7 +15,7 @@ public class BlockGlowingLog extends BlockLog
 	public BlockGlowingLog()
 	{
 		super();
-		setCreativeTab(TabMinestuck.instance);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		setUnlocalizedName("glowingLog");
 		setLightLevel(0.75F);
 		setDefaultState(blockState.getBaseState().withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));

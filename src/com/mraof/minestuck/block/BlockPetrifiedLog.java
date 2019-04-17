@@ -17,7 +17,7 @@ import net.minecraft.world.IBlockAccess;
 public class BlockPetrifiedLog extends BlockLog {
 	public BlockPetrifiedLog()
 	{
-		setCreativeTab(TabMinestuck.instance);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		setUnlocalizedName("petrifiedLog");
 		setSoundType(SoundType.STONE);
 	}

@@ -38,7 +38,7 @@ public class BlockCruxtiteDowel extends Block
 	public BlockCruxtiteDowel()
 	{
 		super(Material.GLASS);
-		this.setCreativeTab(TabMinestuck.instance);
+		this.setCreativeTab(TabMinestuck.getInstance());
 		this.setUnlocalizedName("dowelCruxite");
 		setDefaultState(getDefaultState().withProperty(TYPE, Type.DOWEL));
 	}

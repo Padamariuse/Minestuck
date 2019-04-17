@@ -39,7 +39,7 @@ public class BlockDenseCloud extends Block
 		setHardness(0.5F);
 		setSoundType(SoundType.SNOW);
 		setUnlocalizedName("dense_cloud");
-		setCreativeTab(TabMinestuck.instance);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 	}
 	
 	@Override

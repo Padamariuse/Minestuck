@@ -119,6 +119,7 @@ public class MinestuckModelManager
 		register(pogoClub);
 		register(metalBat);
 		register(spikedClub);
+		register(staleBaguette);
 		
 		register(cane);
 		register(ironCane);
@@ -232,7 +233,8 @@ public class MinestuckModelManager
 		register(strawberryChunk);
 		register(surpriseEmbryo);
 		register(unknowableEgg);
-
+		register(breadcrumbs);
+	
 		register(threshDvd);
 		register(gamebroMagazine);
 		register(gamegrlMagazine);

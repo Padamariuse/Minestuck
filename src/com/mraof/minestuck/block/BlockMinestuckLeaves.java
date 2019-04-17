@@ -4,6 +4,7 @@ import java.util.Random;
 
 import com.mraof.minestuck.item.MinestuckItems;
 
+import com.mraof.minestuck.item.TabMinestuck;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -40,7 +41,7 @@ public abstract class BlockMinestuckLeaves extends Block implements net.minecraf
 		this.setHardness(0.2F);
 		this.setLightOpacity(1);
 		this.setSoundType(SoundType.PLANT);
-		setCreativeTab(MinestuckItems.tabMinestuck);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 	}
 	
 	@Override

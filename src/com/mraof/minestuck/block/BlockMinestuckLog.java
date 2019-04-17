@@ -16,7 +16,7 @@ public class BlockMinestuckLog extends BlockLog
 	{
 		super();
 		setDefaultState(blockState.getBaseState().withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
-		setCreativeTab(TabMinestuck.instance);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 	}
 	
 	@Override

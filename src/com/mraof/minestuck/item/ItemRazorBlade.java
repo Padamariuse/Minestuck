@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 
 public class ItemRazorBlade extends Item {
 	public ItemRazorBlade() {
-		this.setCreativeTab(TabMinestuck.instance);
+		this.setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		this.setUnlocalizedName("razorBlade");
 	}
 	

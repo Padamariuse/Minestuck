@@ -17,7 +17,7 @@ public class BlockGoop extends BlockBreakable
 	public BlockGoop(String name) 
 	{
 		super(Material.CLAY, false);
-		setCreativeTab(TabMinestuck.instance);
+        setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		setSoundType(SoundType.SLIME);
 		setUnlocalizedName(name);
 		setHardness(0.1F);

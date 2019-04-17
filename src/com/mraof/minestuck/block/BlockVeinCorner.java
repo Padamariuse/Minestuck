@@ -34,7 +34,7 @@ public class BlockVeinCorner extends Block
 	
 	protected BlockVeinCorner(String unlocalizedName) {
 		super(Material.WOOD);
-		setCreativeTab(TabMinestuck.instance);
+        setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		setUnlocalizedName(unlocalizedName);
 		setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(VERTICAL, false));
 		setHardness(0.45F);

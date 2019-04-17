@@ -21,7 +21,7 @@ public abstract class BlockCustomCake extends BlockCake
 		setHardness(0.5F);
 		setSoundType(SoundType.CLOTH);
 		disableStats();
-		setCreativeTab(TabMinestuck.instance);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 	}
 	
 	@Override

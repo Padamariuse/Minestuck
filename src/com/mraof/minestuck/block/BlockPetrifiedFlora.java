@@ -20,7 +20,7 @@ public class BlockPetrifiedFlora extends BlockBush {
 	public BlockPetrifiedFlora(String name)
 	{
 		super(Material.ROCK);
-		setCreativeTab(TabMinestuck.instance);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		setUnlocalizedName(name);
 		setSoundType(SoundType.STONE);
 	}

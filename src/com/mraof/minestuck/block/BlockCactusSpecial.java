@@ -18,7 +18,7 @@ public class BlockCactusSpecial extends BlockCactus
 	public BlockCactusSpecial(SoundType soundType, String effectiveTool)
 	{
 		super();
-		this.setCreativeTab(TabMinestuck.instance);
+		this.setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		setSoundType(soundType);
 		this.toolType = effectiveTool;
 	}

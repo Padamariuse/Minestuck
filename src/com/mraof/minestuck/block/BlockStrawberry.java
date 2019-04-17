@@ -41,7 +41,7 @@ public class BlockStrawberry extends BlockDirectional
 		setUnlocalizedName("strawberry");
 		setHardness(1.0F);
 		setDefaultState(getDefaultState().withProperty(FACING, EnumFacing.UP));
-		this.setCreativeTab(TabMinestuck.instance);
+		this.setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		this.setSoundType(SoundType.WOOD);
 	}
 	

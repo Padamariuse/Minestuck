@@ -4,6 +4,7 @@ import java.util.Random;
 
 import com.mraof.minestuck.item.MinestuckItems;
 
+import com.mraof.minestuck.item.TabMinestuck;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -30,7 +31,7 @@ public class BlockEndGrass extends Block
 		setHarvestLevel("pickaxe", 0);
 		setHardness(3.0F);
 		setResistance(15.0F);	//Values used for end stone
-		this.setCreativeTab(MinestuckItems.tabMinestuck);
+		this.setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 	}
 
 	/**

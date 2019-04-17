@@ -34,7 +34,7 @@ public class ItemWeapon extends ItemSword //To allow enchantments such as sharpn
 	private float efficiency;
 	private boolean unbreakable = false;
 	private static final HashMap<String, Set<Material>> toolMaterials = new HashMap<String, Set<Material>>();
-	private CreativeTabs overshadowTab = TabMinestuck.instance;
+	private CreativeTabs overshadowTab = TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.weapons);
 	
 	public ItemWeapon(int maxUses, double damageVsEntity, double weaponSpeed, int enchantability, String name)
 	{

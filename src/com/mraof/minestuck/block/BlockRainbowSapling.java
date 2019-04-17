@@ -39,7 +39,7 @@ public class BlockRainbowSapling extends BlockBush implements IGrowable
 	protected BlockRainbowSapling()
 	{
 		this.setDefaultState(this.blockState.getBaseState().withProperty(GROWN_SOME, false).withProperty(RED, false).withProperty(GREEN, false).withProperty(BLUE, false));
-		this.setCreativeTab(TabMinestuck.instance);
+		this.setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		this.setUnlocalizedName("rainbowSapling");
 		this.setSoundType(SoundType.PLANT);
 	}

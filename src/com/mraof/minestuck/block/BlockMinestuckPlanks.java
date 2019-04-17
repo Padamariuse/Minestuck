@@ -27,7 +27,7 @@ public class BlockMinestuckPlanks extends Block
 	public BlockMinestuckPlanks()
 	{
 		super(Material.WOOD);
-		setCreativeTab(TabMinestuck.instance);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		setDefaultState(blockState.getBaseState().withProperty(VARIANT, BlockType.RAINBOW));
 		setUnlocalizedName("planksMinestuck");
 		this.setHardness(2.0F);

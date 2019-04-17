@@ -11,7 +11,7 @@ public class BlockFrostPlanks extends Block {
 
 	public BlockFrostPlanks() {
 		super(Material.WOOD);
-		setCreativeTab(TabMinestuck.instance);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		setUnlocalizedName("frostPlanks");
 		this.setHardness(2.0F);
 		this.setSoundType(SoundType.WOOD);

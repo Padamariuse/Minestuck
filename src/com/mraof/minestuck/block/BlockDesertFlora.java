@@ -15,7 +15,7 @@ public class BlockDesertFlora extends BlockBush {
 	public BlockDesertFlora(String name) 
 	{
 	super(Material.PLANTS);
-	setCreativeTab(TabMinestuck.instance);
+	setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 	setUnlocalizedName(name);
 	setSoundType(SoundType.PLANT);
 	}

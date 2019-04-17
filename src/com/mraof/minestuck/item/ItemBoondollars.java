@@ -24,7 +24,7 @@ public class ItemBoondollars extends Item
 	public ItemBoondollars()	//TODO Add custom crafting recipe that merges boondollar stacks
 	{
 		setUnlocalizedName("boondollars");
-		setCreativeTab(TabMinestuck.instance);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		setMaxStackSize(1);
 	}
 	

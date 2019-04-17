@@ -9,7 +9,7 @@ public class BlockMinestuckStairs extends BlockStairs
 	public BlockMinestuckStairs(IBlockState modelState)
 	{
 		super(modelState);
-		setCreativeTab(TabMinestuck.instance);
+		setCreativeTab(TabMinestuck.getInstance(TabMinestuck.EnumMinestuckTab.lands));
 		this.useNeighborBrightness = true;
 	}
 
