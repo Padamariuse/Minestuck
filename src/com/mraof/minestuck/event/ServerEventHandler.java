@@ -12,17 +12,21 @@ import com.mraof.minestuck.network.skaianet.SburbHandler;
 import com.mraof.minestuck.network.skaianet.SkaianetHandler;
 import com.mraof.minestuck.util.*;
 import net.java.games.input.Component;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.*;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.event.ServerChatEvent;
+import net.minecraftforge.event.entity.item.ItemExpireEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
@@ -33,6 +37,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
+import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -205,6 +210,16 @@ public class ServerEventHandler
 			if(potionLevel > 0) {
 				event.player.addPotionEffect(new PotionEffect(aspectEffects[aspect.ordinal()], 600, potionLevel-1));
 			}
+		}
+	}
+	
+	@SubscribeEvent
+	public void breadStaling(ItemExpireEvent event)
+	{
+		EntityItem e = event.getEntityItem();
+		if(e.getItem().getCount() == 1 && e.getItem().getItem() == Items.BREAD || OreDictionary.itemMatches(new ItemStack(Items.BREAD), e.getItem(), true)) {
+			EntityItem stalebread = new EntityItem(e.world, e.posX, e.posY, e.posZ, new ItemStack(MinestuckItems.staleBaguette));
+			e.world.spawnEntity(stalebread);
 		}
 	}
 }
