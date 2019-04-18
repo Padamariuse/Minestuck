@@ -238,6 +238,8 @@ public class MinestuckModelManager
 		register(breadcrumbs);
 		
 		register(threshDvd);
+		register(gamebroMagazine);
+		register(gamegrlMagazine);
 		register(crewPoster);
 		register(sbahjPoster);
 		
