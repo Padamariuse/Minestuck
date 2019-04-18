@@ -217,7 +217,7 @@ public class ServerEventHandler
 	public void breadStaling(ItemExpireEvent event)
 	{
 		EntityItem e = event.getEntityItem();
-		if(e.getItem().getCount() == 1 && e.getItem().getItem() == Items.BREAD || OreDictionary.itemMatches(new ItemStack(Items.BREAD), e.getItem(), true)) {
+		if(e.getItem().getCount() == 1 && (e.getItem().getItem() == Items.BREAD || OreDictionary.itemMatches(new ItemStack(Items.BREAD), e.getItem(), true))) {
 			EntityItem stalebread = new EntityItem(e.world, e.posX, e.posY, e.posZ, new ItemStack(MinestuckItems.staleBaguette));
 			e.world.spawnEntity(stalebread);
 		}
