@@ -551,6 +551,7 @@ public class AlchemyRecipes
 		GristRegistry.addGristConversion(new ItemStack(silverSpoon), false, new GristSet(new GristType[] {GristType.Build, GristType.Mercury}, new int[] {6, 4}));
 		GristRegistry.addGristConversion(new ItemStack(crockerSpork), false, new GristSet(new GristType[] {GristType.Build, GristType.Iodine, GristType.Chalk, GristType.Ruby}, new int[] {90, 34, 34, 6}));
 		GristRegistry.addGristConversion(new ItemStack(skaiaFork), new GristSet(new GristType[] {GristType.Build, GristType.Quartz, GristType.Gold, GristType.Amethyst}, new int[]{900, 94, 58, 63}));
+		GristRegistry.addGristConversion(new ItemStack(tuningFork), new GristSet(new GristType[] {GristType.Build, GristType.Cobalt}, new int[]{70, 1}));
 		GristRegistry.addGristConversion(new ItemStack(goldenSpork), new GristSet(new GristType[] {GristType.Build, GristType.Gold, GristType.Diamond}, new int[]{70, 40, 1}));
 		
 		GristRegistry.addGristConversion(new ItemStack(batleacks), false, new GristSet(GristType.Build, 0));
@@ -762,6 +763,7 @@ public class AlchemyRecipes
 		CombinationRegistry.addCombination(new ItemStack(deuceClub), new ItemStack(crewPoster), MODE_AND, false, true, new ItemStack(nightClub));
 		CombinationRegistry.addCombination(new ItemStack(deuceClub), new ItemStack(Items.IRON_INGOT), MODE_AND, false, true, new ItemStack(metalBat));
 		CombinationRegistry.addCombination("logWood", metalBat, OreDictionary.WILDCARD_VALUE, MODE_OR, new ItemStack(spikedClub));
+		CombinationRegistry.addCombination(new ItemStack(Items.BREAD), new ItemStack(Blocks.STONE), MODE_AND, false, true, new ItemStack(staleBaguette));
 		CombinationRegistry.addCombination(new ItemStack(metalBat), new ItemStack(Items.FISH), MODE_OR, false, true, new ItemStack(glubClub));
 		CombinationRegistry.addCombination(new ItemStack(metalBat), new ItemStack(Items.COOKED_FISH), MODE_OR, false, true, new ItemStack(glubClub));
 		
@@ -804,6 +806,7 @@ public class AlchemyRecipes
 		CombinationRegistry.addCombination(new ItemStack(silverSpoon), new ItemStack(Items.CAKE), MODE_AND, false, false, new ItemStack(crockerSpork));
 		CombinationRegistry.addCombination(new ItemStack(fork), new ItemStack(chessboard), MODE_AND, false, true, new ItemStack(skaiaFork));
 		CombinationRegistry.addCombination(new ItemStack(fork), new ItemStack(woodenSpoon), MODE_OR, false, false, new ItemStack(spork));
+		CombinationRegistry.addCombination(new ItemStack(fork), new ItemStack(Blocks.NOTEBLOCK), MODE_AND, false, false, new ItemStack(tuningFork));
 		CombinationRegistry.addCombination(new ItemStack(spork), new ItemStack(Items.GOLD_INGOT), MODE_OR, false, false, new ItemStack(goldenSpork));
 		
 		CombinationRegistry.addCombination(new ItemStack(crockerSpork), new ItemStack(captchaCard), MODE_OR, false, true, new ItemStack(crockerMachine, 1, 0));
@@ -849,6 +852,10 @@ public class AlchemyRecipes
 		CombinationRegistry.addCombination(new ItemStack(Items.STRING), new ItemStack(Items.BUCKET), MODE_AND, new ItemStack(bugNet));
 		CombinationRegistry.addCombination(new ItemStack(Items.COOKIE), new ItemStack(Blocks.REDSTONE_BLOCK), MODE_AND, new ItemStack(sugarCube));
 		CombinationRegistry.addCombination(new ItemStack(surpriseEmbryo), new ItemStack(grimoire), MODE_OR, new ItemStack(unknowableEgg));
+		CombinationRegistry.addCombination(new ItemStack(Items.WHEAT_SEEDS), new ItemStack(Items.BREAD), MODE_OR, new ItemStack(breadcrumbs));
+		CombinationRegistry.addCombination(new ItemStack(Items.PUMPKIN_SEEDS), new ItemStack(Items.BREAD), MODE_OR, new ItemStack(breadcrumbs));
+		CombinationRegistry.addCombination(new ItemStack(Items.BEETROOT_SEEDS), new ItemStack(Items.BREAD), MODE_OR, new ItemStack(breadcrumbs));
+		CombinationRegistry.addCombination(new ItemStack(Items.MELON_SEEDS), new ItemStack(Items.BREAD), MODE_OR, new ItemStack(breadcrumbs));
 		CombinationRegistry.addCombination(new ItemStack(Blocks.NOTEBLOCK), new ItemStack(grimoire), MODE_AND, new ItemStack(longForgottenWarhorn));
 		
 		if(oreMultiplier != 0)
