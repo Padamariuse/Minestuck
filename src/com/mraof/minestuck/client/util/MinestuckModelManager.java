@@ -137,6 +137,7 @@ public class MinestuckModelManager
 		ModelLoader.setCustomMeshDefinition(crockerSpork, new CrockerSporkDefinition());
 		register(skaiaFork);
 		register(fork);
+		register(tuningFork);
 		register(spork);
 		register(goldenSpork);
 		

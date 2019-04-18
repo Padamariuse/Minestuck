@@ -126,6 +126,7 @@ public class MinestuckItems
 	public static ItemSpork crockerSpork = (ItemSpork) new ItemSpork(512, 4.0D, -2.2D, 15, "crocker");
 	public static Item skaiaFork = new ItemWeapon(2048, 8.5D, -2.2D, 10, "skaiaFork");
 	public static Item fork = new ItemWeapon(100, 4.0D, -2.2D, 3, "fork");
+	public static Item tuningFork = new ItemWeapon(250, 4.5D, -2.2D, 15, "tuningFork");
 	public static Item spork = new ItemWeapon(120, 4.5D, -2.3D, 5, "spork");
 	public static Item goldenSpork = new ItemWeapon(45, 5D, -2.3D, 22, "goldenSpork");
 	//Material tools
@@ -474,6 +475,7 @@ public class MinestuckItems
 		registry.register(crockerSpork.setRegistryName("crocker_spork"));
 		registry.register(skaiaFork.setRegistryName("skaia_fork"));
 		registry.register(fork.setRegistryName("fork"));
+		registry.register(tuningFork.setRegistryName("tuning_fork"));
 		registry.register(spork.setRegistryName("spork"));
 		registry.register(goldenSpork.setRegistryName("golden_spork"));
 
