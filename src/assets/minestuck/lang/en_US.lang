@@ -1444,8 +1444,14 @@ tile.stairsMinestuck.pinkStoneBricks.name=Pink Stone Stairs
 tile.strawberry.name=Strawberry
 tile.sugarCube.name=Sugar Cube
 tile.treatedPlanks.name=Treated Planks
+tile.floweryMossBrick.name=Flowery Mossy Stone Bricks
+tile.floweryMossStone.name=Flowery Moss Stone
+tile.leavesEnd.name=End Leaves
+tile.leavesMinestuck.rainbow.name=Rainbow Leaves
 tile.leavesMinestuck.frost.name=Frost Leaves
 tile.frostPlanks.name=Frost Planks
+tile.logMinestuck.rainbow.name=Rainbow Logs
+tile.planksMinestuck.rainbow.name=Rainbow Planks
 tile.woodenCactus.name=Wooden Cactus
 
 tile.appleCake.name=Apple Cake

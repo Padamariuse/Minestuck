@@ -230,7 +230,7 @@ public class MinestuckItems
 		registerItemBlock(registry, new ItemMultiTexture(chessTile, chessTile, new String[]{"black", "white", "darkgrey", "lightgrey"}));
 		registerItemBlock(registry, new ItemBlock(skaiaPortal));
 		
-		registerItemBlock(registry, new ItemMultiTexture(oreCruxite, oreCruxite, new String[0])
+		registerItemBlock(registry, new ItemMultiTexture(MinestuckBlocks.oreCruxite, MinestuckBlocks.oreCruxite, new String[0])
 		{
 			@Override
 			public String getUnlocalizedName(ItemStack stack)
@@ -238,7 +238,7 @@ public class MinestuckItems
 				return block.getUnlocalizedName();
 			}
 		});
-		registerItemBlock(registry, new ItemMultiTexture(oreUranium, oreUranium, new String[0])
+		registerItemBlock(registry, new ItemMultiTexture(MinestuckBlocks.oreUranium, MinestuckBlocks.oreUranium, new String[0])
 		{
 			@Override
 			public String getUnlocalizedName(ItemStack stack)
