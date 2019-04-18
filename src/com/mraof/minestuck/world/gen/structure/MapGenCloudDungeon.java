@@ -1,4 +1,4 @@
-package com.mraof.minestuck.world.lands.structure;
+package com.mraof.minestuck.world.gen.structure;
 
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -6,8 +6,6 @@ import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.StructureStart;
 
 import javax.annotation.Nullable;
-
-import com.mraof.minestuck.world.lands.gen.ChunkProviderLands;
 
 /*
 Then you'll have to refer to its generate() and generateStructure() methods in ChunkProviderLands same as structureHandler and villageHandler
@@ -18,23 +16,25 @@ override customMapGenStructure()in the terrain landspect class to take care of t
 
  */
 
-public class MapGenCloudDungeon extends MapGenLandStructure
+public class MapGenCloudDungeon extends MapGenStructure
 {
-	public MapGenCloudDungeon(ChunkProviderLands cpl)
+	
+	@Override
+	protected boolean canSpawnStructureAtCoords(int chunkX, int chunkY)
 	{
-		super(cpl);
+		return Math.abs(chunkX) > 3 || Math.abs(chunkY) > 3;
 	}
-
+	
 	@Override
 	protected StructureStart getStructureStart(int par1, int par2)
 	{
-		return new CloudDungeonStart(this.getChunkProvider(), this.world, this.rand, par1, par2);
+		return new StructureCloudDungeonStart(this.world, this.rand, par1, par2);
 	}
 	
 	@Override
 	public String getStructureName()
 	{
-		return "MinestuckCloudDungeon";
+		return "CloudDungeon";
 	}
 	
 	@Nullable
