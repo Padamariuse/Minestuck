@@ -120,6 +120,7 @@ public class MinestuckModelManager
 		register(metalBat);
 		register(spikedClub);
 		register(staleBaguette);
+		register(glubClub);
 		
 		register(cane);
 		register(ironCane);

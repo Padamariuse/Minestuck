@@ -109,6 +109,7 @@ public class MinestuckItems
 	public static Item pogoClub = new ItemPogoWeapon(600, 3.5D, -2.2D, 15, "pogoClub", 0.5);
 	public static Item metalBat = new ItemWeapon(750, 5.0D, -2.2D, 5, "metalBat");
 	public static Item spikedClub = new ItemWeapon(500, 5.5D, -2.2D, 5, "spikedClub");
+	public static Item glubClub = new ItemNoisyWeapon(750, 5.5D, -2.2D, 10, "glubClub", SoundEvents.ENTITY_GUARDIAN_FLOP);
 	public static Item staleBaguette = new ItemBaguetteWeapon(50, 1.5D, -2.2D, 20, "staleBaguette", 3, 0.2F, 15);
 	//canes
 	public static Item cane = new ItemWeapon(100, 2.0D, -2.0D, 15, "cane");
@@ -456,6 +457,7 @@ public class MinestuckItems
 		registry.register(metalBat.setRegistryName("metal_bat"));
 		registry.register(spikedClub.setRegistryName("spiked_club"));
 		registry.register(staleBaguette.setRegistryName("stale_baguette"));
+		registry.register(glubClub.setRegistryName("glub_club"));
 		
 		//canes
 		registry.register(cane.setRegistryName("cane"));
