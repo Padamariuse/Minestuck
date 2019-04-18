@@ -130,6 +130,8 @@ public class MinestuckModelManager
 		register(dragonCane);
 		register(pogoCane);
 		register(upStick);
+		register(candyCane);
+		register(sharpCandyCane);
 		
 		register(woodenSpoon);
 		register(silverSpoon);

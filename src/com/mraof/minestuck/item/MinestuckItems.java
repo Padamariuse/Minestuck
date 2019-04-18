@@ -123,6 +123,8 @@ public class MinestuckItems
 	public static Item dragonCane = new ItemWeapon(300, 6.5D, -2.0D, 20, "dragonCane");
 	public static Item pogoCane = new ItemPogoWeapon(500, 3.0D, -2.0D, 15, "pogoCane", 0.6);
 	public static Item upStick = new ItemWeapon(toolUranium, 1, 0.0D, 0.0D, 0, "upStick").setUnbreakable();	//Never runs out of uranium!
+	public static Item candyCane = new ItemCandyCaneConsumableWeapon(200, 1.5D, -2.0D, 15, "candyCane", 2, 0.3F);
+	public static Item sharpCandyCane = new ItemCandyWeapon(200, 5.5D, -2.0D, 15, "sharpCandyCane");
 	//Spoons/forks
 	public static Item woodenSpoon = new ItemWeapon(59, 2.0D, -2.2D, 5, "woodenSpoon");
 	public static Item silverSpoon = new ItemWeapon(250, 2.5D, -2.2D, 12, "silverSpoon");
@@ -474,6 +476,9 @@ public class MinestuckItems
 		registry.register(dragonCane.setRegistryName("dragon_cane"));
 		registry.register(pogoCane.setRegistryName("pogo_cane"));
 		registry.register(upStick.setRegistryName("uranium_powered_stick"));
+		registry.register(candyCane.setRegistryName("candy_cane"));
+		registry.register(sharpCandyCane.setRegistryName("sharp_candy_cane"));
+		
 		//Spoons/forks
 		registry.register(woodenSpoon.setRegistryName("wooden_spoon"));
 		registry.register(silverSpoon.setRegistryName("silver_spoon"));
