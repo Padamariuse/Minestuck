@@ -24,10 +24,10 @@ public class ItemCandyCaneConsumableWeapon extends ItemConsumableWeapon {
     
     @Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving) {
-        stack.damageItem(999, entityLiving);
-        if(entityLiving instanceof EntityPlayer) {
-            ((EntityPlayer) entityLiving).addItemStackToInventory(new ItemStack(MinestuckItems.sharpCandyCane));
+        if(entityLiving instanceof EntityPlayer && !entityLiving.world.isRemote) {
+            ((EntityPlayer) entityLiving).addItemStackToInventory(new ItemStack(MinestuckItems.sharpCandyCane, 1));
         }
+        stack.damageItem(999, entityLiving);
         return super.onItemUseFinish(stack, worldIn, entityLiving);
     }
 }
