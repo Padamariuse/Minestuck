@@ -109,6 +109,7 @@ public class MinestuckItems
 	public static Item pogoClub = new ItemPogoWeapon(600, 3.5D, -2.2D, 15, "pogoClub", 0.5);
 	public static Item metalBat = new ItemWeapon(750, 5.0D, -2.2D, 5, "metalBat");
 	public static Item spikedClub = new ItemWeapon(500, 5.5D, -2.2D, 5, "spikedClub");
+	public static Item staleBaguette = new ItemBaguetteWeapon(50, 1.5D, -2.2D, 20, "staleBaguette", 3, 0.2F, 15);
 	//canes
 	public static Item cane = new ItemWeapon(100, 2.0D, -2.0D, 15, "cane");
 	public static Item ironCane = new ItemWeapon(450, 3.5D, -2.0D, 10, "ironCane");
@@ -157,6 +158,7 @@ public class MinestuckItems
 	public static Item strawberryChunk = new ItemMinestuckSeedFood(4, 0.5F).setUnlocalizedName("strawberryChunk").setCreativeTab(TabMinestuck.instance);
 	public static Item surpriseEmbryo = new ItemSurpriseEmbryo(3, 0.2F, false);
 	public static Item unknowableEgg = new ItemUnknowableEgg(3, 0.3F, false).setUnlocalizedName("unknowableEgg");
+	public static Item breadcrumbs = new ItemQuickFood(1, 0.1F, false).setUnlocalizedName("breadcrumbs");
 	//Other
 	public static Item goldenGrasshopper = new Item().setUnlocalizedName("goldenGrasshopper").setCreativeTab(TabMinestuck.instance);
 	public static Item bugNet = new ItemNet().setUnlocalizedName("net");
@@ -453,6 +455,7 @@ public class MinestuckItems
 		registry.register(pogoClub.setRegistryName("pogo_club"));
 		registry.register(metalBat.setRegistryName("metal_bat"));
 		registry.register(spikedClub.setRegistryName("spiked_club"));
+		registry.register(staleBaguette.setRegistryName("stale_baguette"));
 		
 		//canes
 		registry.register(cane.setRegistryName("cane"));
@@ -504,7 +507,8 @@ public class MinestuckItems
 		registry.register(strawberryChunk.setRegistryName("strawberry_chunk"));
 		registry.register(surpriseEmbryo.setRegistryName("surprise_embryo"));
 		registry.register(unknowableEgg.setRegistryName("unknowable_egg"));
-
+		registry.register(breadcrumbs.setRegistryName("breadcrumbs"));
+		
 		//misc
 		registry.register(goldenGrasshopper.setRegistryName("golden_grasshopper"));
 		registry.register(bugNet.setRegistryName("net"));
