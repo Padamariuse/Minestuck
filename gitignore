@@ -1,0 +1,17 @@
+/assets/forge/
+/download
+/build
+/bin
+/gradle.properties
+.idea
+.gradle
+.classpath
+.project
+.settings/org.eclipse.jdt.core.prefs
+/eclipse
+*~
+*.launch
+/run
+/out
+*.iml
+/.settings
