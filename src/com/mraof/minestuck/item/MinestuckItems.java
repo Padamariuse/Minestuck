@@ -124,8 +124,8 @@ public class MinestuckItems
 	public static Item pogoCane = new ItemPogoWeapon(500, 3.0D, -2.0D, 15, "pogoCane", 0.6);
 	public static Item upStick = new ItemWeapon(toolUranium, 1, 0.0D, 0.0D, 0, "upStick").setUnbreakable();	//Never runs out of uranium!
 	public static Item candyCane = new ItemCandyCaneConsumableWeapon(200, 1.5D, -2.0D, 15, "candyCane", 2, 0.3F);
-	public static Item sharpCandyCane = new ItemCandyWeapon(200, 5.5D, -2.0D, 15, "sharpCandyCane");
-	public static Item umbrella = new ItemWeapon(350, 3.5, -2.0D, 5, "umbrella");
+	public static Item sharpCandyCane = new ItemCandyWeapon(200, 5.0D, -2.0D, 15, "sharpCandyCane");
+	public static Item umbrella = new ItemWeapon(350, 2.5, -2.0D, 5, "umbrella");
 	//Spoons/forks
 	public static Item woodenSpoon = new ItemWeapon(59, 2.0D, -2.2D, 5, "woodenSpoon");
 	public static Item silverSpoon = new ItemWeapon(250, 2.5D, -2.2D, 12, "silverSpoon");
