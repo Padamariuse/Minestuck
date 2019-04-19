@@ -128,7 +128,7 @@ public class MinestuckItems
 	public static Item umbrella = new ItemWeapon(350, 2.5, -2.0D, 5, "umbrella");
 	public static Item primCane = new ItemWeapon(175, 3.0D, -2.0D, 18, "primCane");
 	public static Item lessProperWalkingStick = new ItemDualWeapon(300, 3.0D, 5.5D, -2.0D, -2.0, 18, "lessProperWalkingStick");
-	public static Item upperCrustCrustCane = new ItemConsumableWeapon(249, 3.5D, -2.0D, 18, "upperCrustCrustCane", 4, 0.5F);
+	public static Item upperCrustCrustCane = new ItemBaguetteWeapon(249, 3.5D, -2.0D, 18, "upperCrustCrustCane", 4, 0.5F, 50);
 	public static Item rockefellersWalkingBladecane = new ItemDualWeapon(600, 4.5D, 6.5D,-2.0D, -2.0, 22, "rockefellersWalkingBladecane");
 	//Spoons/forks
 	public static Item woodenSpoon = new ItemWeapon(59, 2.0D, -2.2D, 5, "woodenSpoon");

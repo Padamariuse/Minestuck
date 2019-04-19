@@ -581,10 +581,14 @@ public class AlchemyRecipes
 		GristRegistry.addGristConversion(new ItemStack(ironCane), false, new GristSet(new GristType[] {GristType.Build, GristType.Rust}, new int[] {10, 10}));
 		GristRegistry.addGristConversion(new ItemStack(spearCane), false, new GristSet(new GristType[] {GristType.Build, GristType.Mercury, GristType.Amber}, new int[] {28, 14, 11}));
 		GristRegistry.addGristConversion(new ItemStack(paradisesPortabello), false, new GristSet(new GristType[] {GristType.Build, GristType.Iodine, GristType.Ruby}, new int[] {40, 30, 20}));
-		GristRegistry.addGristConversion(new ItemStack(regiCane), false, new GristSet(new GristType[] {GristType.Amethyst, GristType.Tar,GristType.Gold}, new int[] {30, 55, 32}));
+		GristRegistry.addGristConversion(new ItemStack(regiCane), false, new GristSet(new GristType[] {GristType.Amethyst, GristType.Tar, GristType.Gold}, new int[] {30, 55, 32}));
 		GristRegistry.addGristConversion(new ItemStack(pogoCane), false, new GristSet(new GristType[] {GristType.Build, GristType.Shale}, new int[] {18, 14}));
 		GristRegistry.addGristConversion(new ItemStack(candyCane), false, new GristSet(new GristType[] {GristType.Iodine, GristType.Gold, GristType.Chalk, GristType.Amber}, new int[] {60, 10, 60, 20}));
 		GristRegistry.addGristConversion(new ItemStack(umbrella), false, new GristSet(new GristType[] {GristType.Build, GristType.Tar}, new int[] {12, 1}));
+		GristRegistry.addGristConversion(new ItemStack(primCane), false, new GristSet(new GristType[] {GristType.Build, GristType.Gold}, new int[] {30, 15}));
+		GristRegistry.addGristConversion(new ItemStack(lessProperWalkingStick), false, new GristSet(new GristType[] {GristType.Build, GristType.Gold, GristType.Rust}, new int[] {120, 60}));
+		GristRegistry.addGristConversion(new ItemStack(upperCrustCrustCane), false, new GristSet(new GristType[] {GristType.Build, GristType.Iodine, GristType.Gold}, new int[] {45, 30, 15}));
+		GristRegistry.addGristConversion(new ItemStack(rockefellersWalkingBladecane), false, new GristSet(new GristType[] {GristType.Build, GristType.Gold, GristType.Rust, GristType.Diamond}, new int[] {700, 250, 300, 3}));
 		
 		
 		GristRegistry.addGristConversion(new ItemStack(captcharoidCamera), false, new GristSet(new GristType[] {GristType.Build, GristType.Caulk, GristType.Gold, GristType.Marble, GristType.Mercury, GristType.Shale}, new int[] {5000, 500, 500, 500, 500, 500}));
@@ -798,6 +802,11 @@ public class AlchemyRecipes
 		CombinationRegistry.addCombination(new ItemStack(Items.STICK), new ItemStack(rawUranium), MODE_OR, false, false, new ItemStack(upStick));
 		CombinationRegistry.addCombination(new ItemStack(ironCane), new ItemStack(Items.SUGAR), MODE_AND, false, false, new ItemStack(candyCane));
 		CombinationRegistry.addCombination(new ItemStack(cane), new ItemStack(Items.SHIELD), MODE_AND, false, false, new ItemStack(umbrella));
+		CombinationRegistry.addCombination(new ItemStack(ironCane), new ItemStack(Items.GOLD_INGOT), MODE_AND, false, true, new ItemStack(primCane));
+		CombinationRegistry.addCombination(new ItemStack(primCane), new ItemStack(Items.IRON_SWORD), MODE_OR, false, false, new ItemStack(lessProperWalkingStick));
+		CombinationRegistry.addCombination(new ItemStack(primCane), new ItemStack(ironCane), MODE_OR, false, false, new ItemStack(lessProperWalkingStick));
+		CombinationRegistry.addCombination(new ItemStack(primCane), new ItemStack(staleBaguette), MODE_AND, false, false, new ItemStack(upperCrustCrustCane));
+		CombinationRegistry.addCombination(new ItemStack(lessProperWalkingStick), new ItemStack(Items.DIAMOND), MODE_AND, false, false, new ItemStack(rockefellersWalkingBladecane));
 		
 		//spoons/sporks/forks
 		CombinationRegistry.addCombination(new ItemStack(Items.WOODEN_SHOVEL), new ItemStack(Items.BOWL), MODE_AND, false, true, new ItemStack(woodenSpoon));
