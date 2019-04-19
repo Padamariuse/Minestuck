@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "minestuck:items/upper_crust_crust_cane"
+  }
+}

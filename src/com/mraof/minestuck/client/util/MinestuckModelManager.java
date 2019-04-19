@@ -133,6 +133,12 @@ public class MinestuckModelManager
 		register(candyCane);
 		register(sharpCandyCane);
 		register(umbrella);
+		register(primCane);
+		ModelLoader.registerItemVariants(lessProperWalkingStick, new ResourceLocation("minestuck:lessProperWalkingStick_sheathed"), new ResourceLocation("minestuck:lessProperWalkingStick_drawn"));
+		ModelLoader.setCustomMeshDefinition(lessProperWalkingStick, new DualWeaponDefinition(lessProperWalkingStick));
+		register(upperCrustCrustCane);
+		ModelLoader.registerItemVariants(rockefellersWalkingBladecane, new ResourceLocation("minestuck:rockefellersWalkingBladecane_sheathed"), new ResourceLocation("minestuck:rockefellersWalkingBladecane_drawn"));
+		ModelLoader.setCustomMeshDefinition(rockefellersWalkingBladecane, new DualWeaponDefinition(rockefellersWalkingBladecane));
 		
 		register(woodenSpoon);
 		register(silverSpoon);

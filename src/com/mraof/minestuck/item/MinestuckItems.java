@@ -115,8 +115,8 @@ public class MinestuckItems
 	public static Item glubClub = new ItemNoisyWeapon(750, 5.5D, -2.2D, 10, "glubClub", SoundEvents.ENTITY_GUARDIAN_FLOP);
 	public static Item staleBaguette = new ItemBaguetteWeapon(50, 1.5D, -2.2D, 20, "staleBaguette", 3, 0.2F, 15);
 	//canes
-	public static Item cane = new ItemWeapon(100, 2.0D, -2.0D, 15, "cane");
-	public static Item ironCane = new ItemWeapon(450, 3.5D, -2.0D, 10, "ironCane");
+	public static Item cane = new ItemWeapon(100, 2.0D, -2.0D, 10, "cane");
+	public static Item ironCane = new ItemWeapon(450, 3.5D, -2.0D, 14, "ironCane");
 	public static Item spearCane = new ItemWeapon(300, 5.0D, -2.0D, 13, "spearCane");
 	public static Item paradisesPortabello = new ItemWeapon(175, 3.0D, -2.0D, 10, "paradisesPortabello");
 	public static Item regiCane = new ItemWeapon(812, 6.0D, -2.0D, 7, "regiCane");
@@ -126,6 +126,10 @@ public class MinestuckItems
 	public static Item candyCane = new ItemCandyCaneConsumableWeapon(200, 1.5D, -2.0D, 15, "candyCane", 2, 0.3F);
 	public static Item sharpCandyCane = new ItemCandyWeapon(200, 5.0D, -2.0D, 15, "sharpCandyCane");
 	public static Item umbrella = new ItemWeapon(350, 2.5, -2.0D, 5, "umbrella");
+	public static Item primCane = new ItemWeapon(175, 3.0D, -2.0D, 18, "primCane");
+	public static Item lessProperWalkingStick = new ItemDualWeapon(300, 3.0D, 5.5D, -2.0D, -2.0, 18, "lessProperWalkingStick");
+	public static Item upperCrustCrustCane = new ItemConsumableWeapon(249, 3.5D, -2.0D, 18, "upperCrustCrustCane", 4, 0.5F);
+	public static Item rockefellersWalkingBladecane = new ItemDualWeapon(600, 4.5D, 6.5D,-2.0D, -2.0, 22, "rockefellersWalkingBladecane");
 	//Spoons/forks
 	public static Item woodenSpoon = new ItemWeapon(59, 2.0D, -2.2D, 5, "woodenSpoon");
 	public static Item silverSpoon = new ItemWeapon(250, 2.5D, -2.2D, 12, "silverSpoon");
@@ -480,6 +484,10 @@ public class MinestuckItems
 		registry.register(candyCane.setRegistryName("candy_cane"));
 		registry.register(sharpCandyCane.setRegistryName("sharp_candy_cane"));
 		registry.register(umbrella.setRegistryName("umbrella"));
+		registry.register(primCane.setRegistryName("prim_cane"));
+		registry.register(lessProperWalkingStick.setRegistryName("less_proper_walking_stick"));
+		registry.register(upperCrustCrustCane.setRegistryName("upper_crust_crust_cane"));
+		registry.register(rockefellersWalkingBladecane.setRegistryName("rockefellers_walking_bladecane"));
 		
 		//Spoons/forks
 		registry.register(woodenSpoon.setRegistryName("wooden_spoon"));
