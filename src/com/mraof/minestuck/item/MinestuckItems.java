@@ -18,6 +18,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.EnumHelper;
@@ -114,6 +115,7 @@ public class MinestuckItems
 	public static Item spikedClub = new ItemWeapon(500, 5.5D, -2.2D, 5, "spikedClub");
 	public static Item glubClub = new ItemNoisyWeapon(750, 5.5D, -2.2D, 10, "glubClub", SoundEvents.ENTITY_GUARDIAN_FLOP);
 	public static Item staleBaguette = new ItemBaguetteWeapon(50, 1.5D, -2.2D, 20, "staleBaguette", 3, 0.2F, 15);
+	public static Item clubZero = new ItemIceWeapon(350, 5.0D, -2.2D, 12, "clubZero", new PotionEffect(MobEffects.SLOWNESS, 100));
 	//canes
 	public static Item cane = new ItemWeapon(100, 2.0D, -2.0D, 10, "cane");
 	public static Item ironCane = new ItemWeapon(450, 3.5D, -2.0D, 14, "ironCane");
@@ -471,6 +473,7 @@ public class MinestuckItems
 		registry.register(spikedClub.setRegistryName("spiked_club"));
 		registry.register(staleBaguette.setRegistryName("stale_baguette"));
 		registry.register(glubClub.setRegistryName("glub_club"));
+		registry.register(clubZero.setRegistryName("club_zero"));
 		
 		//canes
 		registry.register(cane.setRegistryName("cane"));

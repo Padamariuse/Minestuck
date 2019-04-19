@@ -577,6 +577,7 @@ public class AlchemyRecipes
 		GristRegistry.addGristConversion(new ItemStack(spikedClub), false, new GristSet(new GristType[] {GristType.Build, GristType.Garnet, GristType.Iodine}, new int[] {46, 38, 13}));
 		GristRegistry.addGristConversion(new ItemStack(staleBaguette), false, new GristSet(new GristType[] {GristType.Iodine}, new int[] {8}));
 		GristRegistry.addGristConversion(new ItemStack(glubClub), false, new GristSet(new GristType[] {GristType.Build, GristType.Caulk, GristType.Mercury}, new int[] {90, 25, 15}));
+		GristRegistry.addGristConversion(new ItemStack(clubZero), false, new GristSet(new GristType[] {GristType.Build, GristType.Shale, GristType.Cobalt}, new int[] {30, 14, 24}));
 		
 		GristRegistry.addGristConversion(new ItemStack(ironCane), false, new GristSet(new GristType[] {GristType.Build, GristType.Rust}, new int[] {10, 10}));
 		GristRegistry.addGristConversion(new ItemStack(spearCane), false, new GristSet(new GristType[] {GristType.Build, GristType.Mercury, GristType.Amber}, new int[] {28, 14, 11}));
@@ -586,7 +587,7 @@ public class AlchemyRecipes
 		GristRegistry.addGristConversion(new ItemStack(candyCane), false, new GristSet(new GristType[] {GristType.Iodine, GristType.Gold, GristType.Chalk, GristType.Amber}, new int[] {60, 10, 60, 20}));
 		GristRegistry.addGristConversion(new ItemStack(umbrella), false, new GristSet(new GristType[] {GristType.Build, GristType.Tar}, new int[] {12, 1}));
 		GristRegistry.addGristConversion(new ItemStack(primCane), false, new GristSet(new GristType[] {GristType.Build, GristType.Gold}, new int[] {30, 15}));
-		GristRegistry.addGristConversion(new ItemStack(lessProperWalkingStick), false, new GristSet(new GristType[] {GristType.Build, GristType.Gold, GristType.Rust}, new int[] {120, 60}));
+		GristRegistry.addGristConversion(new ItemStack(lessProperWalkingStick), false, new GristSet(new GristType[] {GristType.Build, GristType.Gold, GristType.Rust}, new int[] {120, 15, 60}));
 		GristRegistry.addGristConversion(new ItemStack(upperCrustCrustCane), false, new GristSet(new GristType[] {GristType.Build, GristType.Iodine, GristType.Gold}, new int[] {45, 30, 15}));
 		GristRegistry.addGristConversion(new ItemStack(rockefellersWalkingBladecane), false, new GristSet(new GristType[] {GristType.Build, GristType.Gold, GristType.Rust, GristType.Diamond}, new int[] {700, 250, 300, 3}));
 		
@@ -774,6 +775,9 @@ public class AlchemyRecipes
 		CombinationRegistry.addCombination(new ItemStack(Items.BREAD), new ItemStack(Blocks.STONE), MODE_AND, false, true, new ItemStack(staleBaguette));
 		CombinationRegistry.addCombination(new ItemStack(metalBat), new ItemStack(Items.FISH), MODE_OR, false, true, new ItemStack(glubClub));
 		CombinationRegistry.addCombination(new ItemStack(metalBat), new ItemStack(Items.COOKED_FISH), MODE_OR, false, true, new ItemStack(glubClub));
+		CombinationRegistry.addCombination(new ItemStack(nightClub), new ItemStack(Items.SNOWBALL), MODE_AND, false, true, new ItemStack(clubZero));
+		CombinationRegistry.addCombination(new ItemStack(nightClub), new ItemStack(Blocks.PACKED_ICE), MODE_AND, false, true, new ItemStack(clubZero));
+		CombinationRegistry.addCombination(new ItemStack(nightClub), new ItemStack(Blocks.ICE), MODE_AND, false, true, new ItemStack(clubZero));
 		
 		//hammers
 		CombinationRegistry.addCombination(new ItemStack(clawHammer), new ItemStack(Blocks.BRICK_BLOCK), MODE_AND, false, false, new ItemStack(sledgeHammer));
