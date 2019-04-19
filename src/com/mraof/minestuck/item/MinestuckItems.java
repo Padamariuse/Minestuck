@@ -233,6 +233,8 @@ public class MinestuckItems
 	public static Item stoneSlab = new Item().setUnlocalizedName("stoneSlab").setCreativeTab(TabMinestuck.instance);
 	public static Item glowystoneDust = new ItemGlowystoneDust().setUnlocalizedName("glowystoneDust").setCreativeTab(TabMinestuck.instance);
 	public static Item fakeArms = new Item().setUnlocalizedName("fakeArms").setCreativeTab(null);
+	public static Item musicBoxKey = new Item().setUnlocalizedName("musicBoxKey").setCreativeTab(TabMinestuck.instance);
+	public static Item musicBox = new ItemMusicBox().setUnlocalizedName("musicBox").setCreativeTab(TabMinestuck.instance);
 	//Music disks
 	public static Item recordEmissaryOfDance = new ItemMinestuckRecord("emissary", MinestuckSoundHandler.soundEmissaryOfDance).setUnlocalizedName("record");
 	public static Item recordDanceStab = new ItemMinestuckRecord("danceStab", MinestuckSoundHandler.soundDanceStabDance).setUnlocalizedName("record");
@@ -569,6 +571,8 @@ public class MinestuckItems
 		registry.register(stoneSlab.setRegistryName("stone_slab"));
 		registry.register(glowystoneDust.setRegistryName("glowystone_dust"));
 		registry.register(fakeArms.setRegistryName("fake_arms"));
+		registry.register(musicBoxKey.setRegistryName("music_box_key"));
+		registry.register(musicBox.setRegistryName("music_box"));
 		//registry.register(shunt.setRegistryName("shunt"));
 		registry.register(captcharoidCamera.setRegistryName("captcharoid_camera"));
 

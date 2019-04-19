@@ -263,6 +263,8 @@ public class MinestuckModelManager
 		register(recordRetroBattle);
 		register(glowystoneDust);
 		register(fakeArms);
+		register(musicBoxKey);
+		register(musicBox);
 		register(captcharoidCamera);
 		/*
 		for(EnumShopPoster type : EnumShopPoster.values())

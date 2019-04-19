@@ -96,7 +96,8 @@ public class ConsortRewardHandler
 		ConsortRewardHandler.registerPrice(new ItemStack(sporeo), 15, 25);
 		ConsortRewardHandler.registerPrice(new ItemStack(morelMushroom), 40, 80);
 		ConsortRewardHandler.registerPrice(new ItemStack(paradisesPortabello), 400, 600);
-		ConsortRewardHandler.registerPrice(new ItemStack(bugNet), 500, 600);
+		ConsortRewardHandler.registerPrice(new ItemStack(bugNet), 500, 600);;
+		ConsortRewardHandler.registerPrice(new ItemStack(musicBoxKey), 41300, 41300);
 		
 		ConsortRewardHandler.registerPrice(new ItemStack(WATERLILY), 24, 31);
 		ConsortRewardHandler.registerPrice(new ItemStack(POTATO), 12, 15);

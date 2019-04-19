@@ -27,6 +27,12 @@
                 },
                 {
                     "type": "item",
+                    "name": "minestuck:music_box",
+                    "weight": 1,
+                    "quality": 2
+                },
+                {
+                    "type": "item",
                     "name": "minecraft:repeater",
                     "weight": 4,
                     "quality": 0
