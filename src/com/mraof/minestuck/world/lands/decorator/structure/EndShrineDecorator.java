@@ -75,7 +75,6 @@ public class EndShrineDecorator  extends SimpleStructureDecorator
             }
         }
         
-        System.out.print(pos);
         template.addBlocksToWorld(world, pos, settings);
         
         
