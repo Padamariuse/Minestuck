@@ -7,6 +7,7 @@ import com.mraof.minestuck.world.gen.feature.WorldGenEndTree;
 import com.mraof.minestuck.world.lands.decorator.ILandDecorator;
 import com.mraof.minestuck.world.lands.decorator.UndergroundDecoratorVein;
 import com.mraof.minestuck.world.lands.decorator.WorldgenTreeDecorator;
+import com.mraof.minestuck.world.lands.decorator.structure.EndShrineDecorator;
 import com.mraof.minestuck.world.lands.structure.blocks.StructureBlockRegistry;
 
 import net.minecraft.block.BlockColored;
@@ -65,6 +66,7 @@ public class LandAspectEnd extends TerrainLandAspect
 		ArrayList<ILandDecorator> list = new ArrayList<ILandDecorator>();
 		list.add(new WorldgenTreeDecorator(2, new WorldGenEndTree(false), BiomeMinestuck.mediumRough));
 		list.add(new WorldgenTreeDecorator(3, new WorldGenEndTree(false), BiomeMinestuck.mediumNormal));
+		list.add(new EndShrineDecorator(BiomeMinestuck.mediumNormal, BiomeMinestuck.mediumRough));
 		
 		list.add(new UndergroundDecoratorVein(Blocks.GRAVEL.getDefaultState(), 8, 33, 256));
 		list.add(new UndergroundDecoratorVein(Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.COARSE_DIRT), 8, 16, 128));
