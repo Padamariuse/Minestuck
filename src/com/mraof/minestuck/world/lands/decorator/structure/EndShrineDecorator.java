@@ -62,7 +62,7 @@ public class EndShrineDecorator  extends SimpleStructureDecorator
             {
                 world.setBlockToAir(blockpos);
                 EntityLich lich = new EntityLich(world);
-                lich.setPositionAndRotation(blockpos.getX() - 1, blockpos.getY(), blockpos.getZ(), random.nextFloat()*360F, 0);
+                lich.setPositionAndRotation(blockpos.getX(), blockpos.getY(), blockpos.getZ(), random.nextFloat()*360F, 0);
                 lich.onInitialSpawn(null, null);
                 lich.setHomePosAndDistance(blockpos, 2);
                 world.spawnEntity(lich);
