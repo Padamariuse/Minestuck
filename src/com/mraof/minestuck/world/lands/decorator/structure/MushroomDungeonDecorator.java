@@ -62,7 +62,6 @@ public class MushroomDungeonDecorator extends SimpleStructureDecorator
             if ("underling".equals(entry.getValue()))
             {
                 world.setBlockToAir(blockpos);
-                System.out.println("" + pos);
                 EntityLich lich = new EntityLich(world);
                 lich.setPositionAndRotation(blockpos.getX(), blockpos.getY() + 1, blockpos.getZ(), random.nextFloat()*360F, 0);
                 lich.onInitialSpawn(null, null);
