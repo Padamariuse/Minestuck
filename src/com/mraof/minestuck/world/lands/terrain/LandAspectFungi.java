@@ -3,25 +3,21 @@ package com.mraof.minestuck.world.lands.terrain;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mraof.minestuck.block.BlockColoredDirt;
 import com.mraof.minestuck.block.BlockMinestuckStone;
 import com.mraof.minestuck.block.MinestuckBlocks;
 import com.mraof.minestuck.entity.consort.EnumConsort;
 import com.mraof.minestuck.world.biome.BiomeMinestuck;
 import com.mraof.minestuck.world.lands.decorator.ILandDecorator;
-import com.mraof.minestuck.world.lands.decorator.LeaflessTreeDecorator;
 import com.mraof.minestuck.world.lands.decorator.SurfaceDecoratorRegistryVein;
-import com.mraof.minestuck.world.lands.decorator.SurfaceDecoratorVein;
 import com.mraof.minestuck.world.lands.decorator.SurfaceMushroomGenerator;
 import com.mraof.minestuck.world.lands.decorator.UndergroundDecoratorVein;
 import com.mraof.minestuck.world.lands.decorator.WorldGenDecorator;
-import com.mraof.minestuck.world.lands.structure.GateStructurePillar;
+import com.mraof.minestuck.world.lands.decorator.structure.MushroomDungeonDecorator;
 import com.mraof.minestuck.world.lands.structure.IGateStructure;
 import com.mraof.minestuck.world.lands.structure.GateStructureMushroom;
 import com.mraof.minestuck.world.lands.structure.blocks.StructureBlockRegistry;
 
 import net.minecraft.block.BlockColored;
-import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockStoneBrick;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumDyeColor;
@@ -76,6 +72,7 @@ public class LandAspectFungi extends TerrainLandAspect
 		list.add(new SurfaceMushroomGenerator(Blocks.RED_MUSHROOM, true, 10, 64, BiomeMinestuck.mediumNormal));
 		list.add(new WorldGenDecorator(new WorldGenBigMushroom(), 200, 0.6F, BiomeMinestuck.mediumNormal));
 		list.add(new WorldGenDecorator(new WorldGenBigMushroom(), 120, 0.6F, BiomeMinestuck.mediumRough));
+		list.add(new MushroomDungeonDecorator(BiomeMinestuck.mediumNormal));
 		
 		list.add(new UndergroundDecoratorVein(Blocks.GRAVEL.getDefaultState(), 8, 33, 256));
 		list.add(new UndergroundDecoratorVein(Blocks.IRON_ORE.getDefaultState(), 24, 9, 64));
