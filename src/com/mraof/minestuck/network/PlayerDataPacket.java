@@ -58,8 +58,7 @@ public class PlayerDataPacket extends MinestuckPacket
 				data.writeInt(EnumClass.getIntFromClass((EnumClass) dat[1]));
 				data.writeInt(EnumAspect.getIntFromAspect((EnumAspect) dat[2]));
 			}
-		}
-        } else if(type == CONSORT_REPUTATION)
+		} else if(type == CONSORT_REPUTATION)
         {
             data.writeInt((Integer) dat[1]);
         }
