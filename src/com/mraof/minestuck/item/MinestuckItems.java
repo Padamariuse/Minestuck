@@ -118,6 +118,7 @@ public class MinestuckItems
 	public static Item clubZero = new ItemIceWeapon(350, 5.0D, -2.2D, 12, "clubZero", new PotionEffect(MobEffects.SLOWNESS, 100));
 	//canes
 	public static Item cane = new ItemWeapon(100, 2.0D, -2.0D, 10, "cane");
+	public static Item bearPokingStick = new ItemPokingStickWeapon(150, 2.5D, -2.0, 5, "bearPokingStick");
 	public static Item ironCane = new ItemWeapon(450, 3.5D, -2.0D, 14, "ironCane");
 	public static Item spearCane = new ItemWeapon(300, 5.0D, -2.0D, 13, "spearCane");
 	public static Item paradisesPortabello = new ItemWeapon(175, 3.0D, -2.0D, 10, "paradisesPortabello");
@@ -479,6 +480,7 @@ public class MinestuckItems
 		
 		//canes
 		registry.register(cane.setRegistryName("cane"));
+		registry.register(bearPokingStick.setRegistryName("bear_poking_stick"));
 		registry.register(ironCane.setRegistryName("iron_cane"));
 		registry.register(spearCane.setRegistryName("spear_cane"));
 		registry.register(paradisesPortabello.setRegistryName("paradises_portabello"));

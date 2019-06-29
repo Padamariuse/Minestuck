@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "  I",
+    " I ",
+    "L  "
+  ],
+  "key": {
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    },
+    "L": {
+      "item": "minecraft:leather",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "minestuck:bear_poking_stick",
+    "count": 1
+  }
+}
