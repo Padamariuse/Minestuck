@@ -174,6 +174,7 @@ public class MSItems
 	public static final Item CROCKER_FORK = getNull();
 	public static final Item SKAIA_FORK = getNull();
 	public static final Item FORK = getNull();
+	public static final Item SURPRISE_FORK = getNull();
 	public static final Item TUNING_FORK = getNull();
 	public static final Item EDISONS_FURY = getNull();
 	public static final Item EDISONS_FURY_OFF = getNull();
@@ -714,6 +715,7 @@ public class MSItems
 		registry.register(new DualWeaponItem(MSItemTypes.RUBY_TIER, 2, -2.6F, 1.0F, () -> MSItems.CROCKER_SPOON, MSItemTypes.MISC_TOOL, new Item.Properties().defaultMaxDamage(512)).setRegistryName("crocker_fork"));
 		registry.register(new WeaponItem(MSItemTypes.REGI_TIER, 5, -2.2F, 1.0F, MSItemTypes.MISC_TOOL, new Item.Properties().defaultMaxDamage(2048).group(MSItemGroup.WEAPONS)).setRegistryName("skaia_fork"));
 		registry.register(new WeaponItem(ItemTier.STONE, 3, -2.2F, 1.0F, MSItemTypes.MISC_TOOL, new Item.Properties().group(MSItemGroup.WEAPONS)).setRegistryName("fork"));
+		registry.register(new KundlerSurpriseWeaponItem(ItemTier.STONE, 4, -2.2F, 1.0F, MSItemTypes.MISC_TOOL, new Item.Properties().group(MSItemGroup.WEAPONS)).setRegistryName("surprise_fork"));
 		registry.register(new NoisyWeaponItem(ItemTier.IRON, 3, -2.2F, 1.0F, () -> SoundEvents.BLOCK_NOTE_BLOCK_CHIME, MSItemTypes.MISC_TOOL, new Item.Properties().group(MSItemGroup.WEAPONS)).setRegistryName("tuning_fork"));
 		registry.register(new ElectricWeaponItem(ItemTier.IRON, 4, -2.3F, 1.0F, true, () -> MSItems.EDISONS_FURY_OFF, MSItemTypes.MISC_TOOL, new Item.Properties().group(MSItemGroup.WEAPONS)).setRegistryName("edisons_fury"));
 		registry.register(new DualWeaponItem(ItemTier.IRON, 5, -2.3F, 1.0F, () -> MSItems.EDISONS_FURY, MSItemTypes.MISC_TOOL, new Item.Properties().group(MSItemGroup.WEAPONS)).setRegistryName("edisons_fury_off"));

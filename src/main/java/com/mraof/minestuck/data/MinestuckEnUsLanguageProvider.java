@@ -504,6 +504,8 @@ public class MinestuckEnUsLanguageProvider extends MinestuckLanguageProvider
 		add(MSItems.SKAIA_FORK, "Skaia War Fork");
 		addTooltip(MSItems.SKAIA_FORK, "The elegance and grace of Skaia, and the ability to poke things of a fork!");
 		add(MSItems.FORK, "Fork");
+		add(MSItems.SURPRISE_FORK, "Kundler Surprise Fork");
+		addTooltip(MSItems.SURPRISE_FORK, "In every bite you take, there's a little surprise!");
 		add(MSItems.TUNING_FORK, "Tuning Fork");
 		addTooltip(MSItems.TUNING_FORK, "Does anyone hear a ringing?");
 		add(MSItems.EDISONS_FURY, "Edison's Fury");

@@ -1,0 +1,12 @@
+{
+  "type": "minestuck:grist_cost",
+  "ingredient": {
+    "item": "minestuck:surprise_fork"
+  },
+  "grist_cost": {
+    "minestuck:build": 124,
+    "minestuck:rust": 85,
+    "minestuck:amber": 58,
+    "minestuck:iodine": 40
+  }
+}
