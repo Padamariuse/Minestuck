@@ -508,6 +508,8 @@ public class MinestuckEnUsLanguageProvider extends MinestuckLanguageProvider
 		addTooltip(MSItems.SURPRISE_FORK, "In every bite you take, there's a little surprise!");
 		add(MSItems.TUNING_FORK, "Tuning Fork");
 		addTooltip(MSItems.TUNING_FORK, "Does anyone hear a ringing?");
+		add(MSItems.ELECTRIC_FORK, "Electric Fork");
+		addTooltip(MSItems.ELECTRIC_FORK, "It buzzes, sometimes. Usually the batteries don't work.");
 		add(MSItems.EDISONS_FURY, "Edison's Fury");
 		addTooltip(MSItems.EDISONS_FURY, "Look! It lights up!");
 		add(MSItems.EDISONS_FURY_OFF, "Edison's Fury");

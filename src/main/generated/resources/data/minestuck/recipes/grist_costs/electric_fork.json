@@ -1,0 +1,11 @@
+{
+  "type": "minestuck:grist_cost",
+  "ingredient": {
+    "item": "minestuck:electric_fork"
+  },
+  "grist_cost": {
+    "minestuck:build": 85,
+    "minestuck:rust": 38,
+    "minestuck:uranium": 6
+  }
+}
