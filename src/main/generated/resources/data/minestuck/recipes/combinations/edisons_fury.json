@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "minestuck:tuning_fork"
+  },
+  "input2": {
+    "item": "minecraft:redstone_lamp"
+  },
+  "mode": "and",
+  "output": {
+    "item": "minestuck:edisons_fury"
+  }
+}

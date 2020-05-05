@@ -1,0 +1,11 @@
+{
+  "type": "minestuck:grist_cost",
+  "ingredient": {
+    "item": "minestuck:edisons_fury_off"
+  },
+  "grist_cost": {
+    "minestuck:build": 145,
+    "minestuck:rust": 64,
+    "minestuck:uranium": 17
+  }
+}
