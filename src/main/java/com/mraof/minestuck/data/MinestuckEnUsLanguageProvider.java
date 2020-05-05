@@ -512,6 +512,7 @@ public class MinestuckEnUsLanguageProvider extends MinestuckLanguageProvider
 		addTooltip(MSItems.EDISONS_FURY, "Look! It lights up!");
 		add(MSItems.EDISONS_FURY_OFF, "Edison's Fury");
 		addTooltip(MSItems.EDISONS_FURY_OFF, "Look! It lights up!");
+		add(MSItems.PITCHFORK, "Pitchfork");
 		add(MSItems.SPORK, "Spork");
 		add(MSItems.GOLDEN_SPORK, "Golden Spork");
 		addTooltip(MSItems.GOLDEN_SPORK, "A spoon and fork with all the awfulness of gold tools? Sign me up!");

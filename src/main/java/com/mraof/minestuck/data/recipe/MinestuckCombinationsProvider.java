@@ -414,6 +414,7 @@ public class MinestuckCombinationsProvider extends RecipeProvider
 		CombinationRecipeBuilder.of(MSItems.TUNING_FORK).input(MSItems.FORK).and().input(Items.NOTE_BLOCK).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.EDISONS_FURY).input(MSItems.TUNING_FORK).and().input(Items.REDSTONE_LAMP).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.SKAIA_FORK).input(MSItems.FORK).and().input(MSBlocks.CHESSBOARD).build(consumer);
+		CombinationRecipeBuilder.of(MSItems.PITCHFORK).input(MSItems.FORK).or().input(Items.STICK).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.SPORK).input(MSItems.FORK).or().input(MSItems.WOODEN_SPOON).build(consumer);
 		CombinationRecipeBuilder.of(MSItems.GOLDEN_SPORK).input(MSItems.SPORK).or().input(Items.GOLD_INGOT).build(consumer);
 		
